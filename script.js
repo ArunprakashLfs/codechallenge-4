@@ -33,11 +33,11 @@ submitEl.addEventListener('click', function(){
     console.log(rows);
     for (let [index, word] of Object.entries(rows)) {// we using for loops for creating every value in array
         const [first , second] = word.toLowerCase().trim().split("_");
-        index++;
+        
         //it turns all elemrnt to lowercase and remove underscope("_")[underscorecase]
         const output = first + second[0].toUpperCase()+second.slice(1);
         // assign into output and given as value[underscoreCase]
-        let outputEl = output.padEnd(20, ' ') + '✅'.repeat(index);
+        let outputEl = output.padEnd(20, ' ') + '✅'.repeat(Number(index)+1);
         console.log(outputEl);
 
         
